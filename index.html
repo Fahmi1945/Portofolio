@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portofolio - Fahmi Zidan</title>
+
+    <!-- Framework Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Devicon (untuk ikon teknologi) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+    <!-- ScrollReveal.js untuk animasi scroll -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- Link ke File CSS Kustom Anda -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Konfigurasi Tailwind & Font -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-white text-slate-700">
+
+    <!-- ===== HEADER / NAVIGASI ===== -->
+    <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 border-b border-slate-200">
+        <nav class="container mx-auto flex items-center justify-between p-4 lg:px-8">
+            <a href="#home" class="text-2xl font-bold text-blue-600">FZ</a>
+            <!-- Menu untuk Desktop -->
+            <div class="hidden md:flex space-x-8 text-slate-800" id="nav-menu">
+                <a href="#home" class="nav-link hover:text-blue-600 transition-colors">Home</a>
+                <a href="#about" class="nav-link hover:text-blue-600 transition-colors">About</a>
+                <a href="#skills" class="nav-link hover:text-blue-600 transition-colors">Skills</a>
+                <a href="#projects" class="nav-link hover:text-blue-600 transition-colors">Projects</a>
+                <a href="#contact" class="nav-link hover:text-blue-600 transition-colors">Contact</a>
+            </div>
+            <!-- Tombol Menu untuk Mobile -->
+            <button id="nav-toggle" class="md:hidden text-slate-800">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="4" x2="20" y1="12" y2="12" />
+                    <line x1="4" x2="20" y1="6" y2="6" />
+                    <line x1="4" x2="20" y1="18" y2="18" />
+                </svg>
+            </button>
+        </nav>
+        <!-- Menu untuk Mobile (Muncul saat di-klik) -->
+        <div class="hidden md:hidden" id="mobile-menu">
+            <a href="#home" class="nav-link-mobile block py-2 px-4 text-sm hover:bg-slate-100">Home</a>
+            <a href="#about" class="nav-link-mobile block py-2 px-4 text-sm hover:bg-slate-100">About</a>
+            <a href="#skills" class="nav-link-mobile block py-2 px-4 text-sm hover:bg-slate-100">Skills</a>
+            <a href="#projects" class="nav-link-mobile block py-2 px-4 text-sm hover:bg-slate-100">Projects</a>
+            <a href="#contact" class="nav-link-mobile block py-2 px-4 text-sm hover:bg-slate-100">Contact</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- ===== BAGIAN HOME (PERKENALAN) ===== -->
+        <section id="home" class="min-h-screen flex items-center">
+            <div class="flex flex-col-reverse md:flex-row items-center justify-between w-full gap-16">
+                <!-- Kolom Teks (Kiri di Desktop, Bawah di Mobile) -->
+                <div class="text-center md:text-left md:w-1/2 reveal-left">
+                    <p class="text-blue-600 font-medium">Halo, saya</p>
+                    <h1 class="text-5xl md:text-6xl font-bold text-slate-900 mt-2">Fahmi Zidan</h1>
+                    <h2 class="text-3xl md:text-4xl font-semibold text-slate-600 mt-3">Mahasiswa Teknik Informatika</h2>
+                    <p class="mt-6 text-slate-700 max-w-lg mx-auto md:mx-0">
+                        Saya mahasiswa aktif dari Universitas Islam Negeri Maulana Malik Ibrahim Malang Jurusan teknik informatika semester 4.
+                    </p>
+                    <a href="#contact" class="inline-block bg-blue-600 text-white font-semibold px-6 py-3 rounded-md mt-8 hover:bg-blue-700 transition-transform duration-300 hover:scale-105 glowing-btn">
+                        Contact Me
+                    </a>
+                </div>
+                <!-- Kolom Gambar (Kanan di Desktop, Atas di Mobile) -->
+                <div class="relative flex justify-center items-center md:w-1/2 mt-12 md:mt-0 reveal-right">
+                    <div class="absolute w-full max-w-md text-blue-100">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="currentColor" d="M59.2,-49.9C72.8,-35.3,77.3,-17.7,75.2,-1.8C73.1,14.1,64.4,28.2,52.8,42.4C41.2,56.6,26.7,70.9,9.8,74.5C-7.1,78.1,-26.4,70.9,-41.8,59.3C-57.2,47.7,-68.6,31.7,-72,14.3C-75.3,-3.1,-70.6,-21.9,-59.6,-36.4C-48.6,-50.9,-31.3,-61.1,-14.9,-62.7C1.5,-64.3,17.9,-57.2,33.8,-54.3C49.7,-51.4,52.8,-53.4,59.2,-49.9Z" transform="translate(100 100)" />
+                        </svg>
+                    </div>
+                    <img src="assets/img/profile.jpeg" alt="Foto Profil Fahmi Zidan" class="relative z-10 w-full max-w-xs sm:max-w-sm rounded-full shadow-xl">
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== BAGIAN TENTANG SAYA ===== -->
+        <section id="about" class="py-20 lg:py-24">
+            <div class="bg-slate-50 rounded-lg p-8 md:p-12 reveal-fade">
+                <h2 class="text-3xl font-bold text-slate-900 text-center">About Me</h2>
+                <div class="flex flex-col md:flex-row items-center gap-10 mt-10">
+                    <div class="md:w-1/3">
+                        <img src="assets/img/profile.jpeg" alt="Foto Profil" class="rounded-lg shadow-lg w-full">
+                    </div>
+                    <div class="md:w-2/3 text-slate-600">
+                        <p class="mb-4">
+                            Saat ini saya adalah mahasiswa semester 4 di Universitas Islam Negeri Maulana Malik Ibrahim Malang.
+                        </p>
+                        <p>
+                            Selama kuliah, saya aktif mengerjakan berbagai proyek pemrograman, baik secara individu maupun kelompok, yang mengasah kemampuan saya dalam analisis masalah dan pengembangan solusi. Di luar akademik, saya suka mengeksplorasi framework baru dan mengikuti perkembangan tren teknologi.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== BAGIAN KEAHLIAN (SKILLS) ===== -->
+        <section id="skills" class="py-20 lg:py-24">
+            <h2 class="text-3xl font-bold text-slate-900 text-center reveal-fade">Skills</h2>
+            <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-4 md:gap-6 mt-10 text-center">
+                <!-- Setiap skill item akan muncul dengan animasi -->
+                <div class="bg-white p-4 rounded-lg shadow-md border border-slate-100 flex flex-col items-center justify-center gap-2 card-lift transition-all reveal-skill">
+                    <i class="devicon-java-plain text-4xl text-blue-600"></i>
+                    <span class="font-medium text-sm">Java</span>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md border border-slate-100 flex flex-col items-center justify-center gap-2 card-lift transition-all reveal-skill">
+                    <i class="devicon-html5-plain text-4xl text-blue-600"></i>
+                    <span class="font-medium text-sm">HTML5</span>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md border border-slate-100 flex flex-col items-center justify-center gap-2 card-lift transition-all reveal-skill">
+                    <i class="devicon-css3-plain text-4xl text-blue-600"></i>
+                    <span class="font-medium text-sm">CSS3</span>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md border border-slate-100 flex flex-col items-center justify-center gap-2 card-lift transition-all reveal-skill">
+                    <i class="devicon-php-plain text-4xl text-blue-600"></i>
+                    <span class="font-medium text-sm">PHP</span>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md border border-slate-100 flex flex-col items-center justify-center gap-2 card-lift transition-all reveal-skill">
+                    <i class="devicon-mysql-plain text-4xl text-blue-600"></i>
+                    <span class="font-medium text-sm">MySQL</span>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md border border-slate-100 flex flex-col items-center justify-center gap-2 card-lift transition-all reveal-skill">
+                    <i class="devicon-figma-plain text-4xl text-blue-600"></i>
+                    <span class="font-medium text-sm">Figma</span>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md border border-slate-100 flex flex-col items-center justify-center gap-2 card-lift transition-all reveal-skill">
+                    <i class="devicon-blender-original text-4xl text-blue-600"></i>
+                    <span class="font-medium text-sm">Blender</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== BAGIAN PROYEK (PROJECTS) ===== -->
+        <section id="projects" class="py-20 lg:py-24">
+            <div class="bg-slate-50 rounded-lg p-8 md:p-12 reveal-fade">
+                <h2 class="text-3xl font-bold text-slate-900 text-center">Proyek Unggulan</h2>
+                <div class="grid md:grid-cols-2 gap-8 mt-10">
+                    <div class="bg-white p-6 rounded-lg shadow-lg border border-slate-100 card-lift transition-all">
+                        <h3 class="font-bold text-xl text-blue-600">Qurbanku</h3>
+                        <p class="mt-2 text-sm text-slate-600">Proyek tugas akhir mata kuliah Web Programming. Membangun sebuah sistem informasi berbasis web untuk mengelola data qurban.</p>
+                        <p class="mt-3 text-xs text-slate-500">Teknologi: HTML, CSS, PHP, MySQL</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg border border-slate-100 card-lift transition-all">
+                        <h3 class="font-bold text-xl text-blue-600">RAIS DARI BAYANGAN MENJADI BINTANG</h3>
+                        <p class="mt-2 text-sm text-slate-600">Proyek tugas akhir mata kuliah Computer Graphic. Membuat animasi 3D menggunakan Blender, animasi bola dengan unsur islam.</p>
+                        <p class="mt-3 text-xs text-slate-500">Teknologi: Blender</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== BAGIAN KONTAK ===== -->
+        <section id="contact" class="py-20 lg:py-24 text-center reveal-fade">
+            <h2 class="text-3xl font-bold text-slate-900">Tertarik Bekerja Sama?</h2>
+            <p class="mt-4 max-w-xl mx-auto text-slate-600">
+                Saya selalu terbuka untuk diskusi, kolaborasi, atau sekadar bertukar pikiran. Jangan ragu untuk menghubungi saya.
+            </p>
+            <a href="mailto:fahmizidan@example.com" class="inline-block bg-blue-600 text-white font-semibold px-6 py-3 rounded-md mt-8 hover:bg-blue-700 transition-transform duration-300 hover:scale-105 glowing-btn">
+                Kirim Email
+            </a>
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="border-t border-slate-200">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col sm:flex-row justify-between items-center text-center sm:text-left">
+            <div class="text-slate-600">
+                <p class="font-bold text-slate-800">Fahmi Zidan</p>
+                <p class="text-sm">&copy; 2025. Just Personal Portofolio junior dev.</p>
+            </div>
+            <div class="flex justify-center space-x-6 mt-4 sm:mt-0">
+                <a href="#" target="_blank" class="text-slate-500 hover:text-blue-600 transition-colors">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12.013c0 4.418 2.865 8.166 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.03-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12.013C22 6.477 17.523 2 12 2z" clip-rule="evenodd" /></svg>
+                </a>
+                <a href="#" target="_blank" class="text-slate-500 hover:text-blue-600 transition-colors">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Link ke File JavaScript Anda -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>

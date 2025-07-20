@@ -1,0 +1,33 @@
+
+body{
+  top: 0;
+  left: 0;
+}
+#home{
+  top: 0;
+  left: 0;
+  margin-left: 60px;
+}
+/* Menambahkan gaya untuk link navigasi yang aktif */
+.nav-active {
+    color: #2563eb; /* Warna biru-600 dari Tailwind */
+    font-weight: 600;
+}
+
+/* Efek glowing untuk tombol */
+.glowing-btn {
+    position: relative;
+    box-shadow: 0 0 5px #2563eb, 0 0 10px #2563eb;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.glowing-btn:hover {
+    box-shadow: 0 0 10px #2563eb, 0 0 20px #2563eb;
+}
+
+
+/* Animasi untuk kartu proyek dan skill saat di-hover */
+.card-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
